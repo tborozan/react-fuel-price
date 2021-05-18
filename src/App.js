@@ -36,7 +36,7 @@ function App() {
 				<div>Loading...</div>
 			) : (
 				<div className="container">
-					<Header title="FUEL PRICES" />
+					<Header title="CIJENE GORIVA" />
 					<LatestPrices latestPrices={latestPrices} />
 				</div>
 			)}
