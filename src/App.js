@@ -2,6 +2,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import LatestPrices from "./components/LatestPrices";
 import { useState, Fragment, useEffect } from "react";
+import PriceHistoryChart from "./components/PriceHistoryChart";
 
 function getLatestPrices(priceHistory) {
 	let latestDate = new Date(
@@ -38,6 +39,7 @@ function App() {
 				<div className="container">
 					<Header title="CIJENE GORIVA" />
 					<LatestPrices latestPrices={latestPrices} />
+					<PriceHistoryChart priceHistory={priceHistory} />
 				</div>
 			)}
 		</Fragment>
