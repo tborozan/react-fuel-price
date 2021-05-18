@@ -1,15 +1,25 @@
-import React from "react";
 import Price from "./Price";
 
 const LatestPrices = (props) => {
-	console.log(props.latestPrices);
+	let benzin = props.latestPrices.find(
+		(x) => x.tip_goriva_id === 1
+	).avg_cijena;
+	let dizel = props.latestPrices.find(
+		(x) => x.tip_goriva_id === 2
+	).avg_cijena;
+	let autoPlin = props.latestPrices.find(
+		(x) => x.tip_goriva_id === 3
+	).avg_cijena;
+	let plinskoUlje = props.latestPrices.find(
+		(x) => x.tip_goriva_id === 4
+	).avg_cijena;
 
 	return (
 		<div className="latestPrices">
-			<Price name={"Benzin"} price={10} />
-			<Price name={"Dizel"} price={10} />
-			<Price name={"Autoplin"} price={10} />
-			<Price name={"Plinsko ulje"} price={10} />
+			<Price name={"Benzin"} price={benzin} />
+			<Price name={"Dizel"} price={dizel} />
+			<Price name={"Autoplin"} price={autoPlin} />
+			<Price name={"Plinsko ulje"} price={plinskoUlje} />
 		</div>
 	);
 };
